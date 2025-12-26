@@ -1,0 +1,42 @@
+int main() {
+ char cont;
+ do {
+ double num1, num2, result;
+ int choice;
+ cout << "Enter first number: ";
+ cin >> num1;
+ cout << "Enter second number: ";
+ cin >> num2;
+ cout << "\nChoose operation:\n";
+ cout << "1. Add\n2. Subtract\n3. Multiply\n4. Divide\n";
+ cout << "Enter your choice (1/2/3/4): ";
+ cin >> choice;
+ if(choice == 1) {
+ result = num1 + num2;
+ cout << "Result: " << result << endl;
+ }
+ else if(choice == 2) {
+ result = num1 - num2;
+ cout << "Result: " << result << endl;
+ }
+ else if(choice == 3) {
+ result = num1 * num2;
+ cout << "Result: " << result << endl;
+ }
+ else if(choice == 4) {
+ if(num2 != 0) {
+ result = num1 / num2;
+ cout << "Result: " << result << endl;
+ } else {
+ cout << "Error: Division by zero!" << endl;
+ }
+ }
+ else {
+ cout << "Invalid choice!" << endl;
+}
+ cout << "\nDo you want to calculate again? (Y/N): ";
+ cin >> cont;
+ } while(cont == 'Y' || cont == 'y');
+ cout << "Calculator program ended." << endl;
+ return 0;
+}
